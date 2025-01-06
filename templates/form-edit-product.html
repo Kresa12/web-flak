@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Update Produk{% endblock %}
+
+{% block content %}
+<h1 style="background-color: antiquewhite;">
+    Update Product
+</h1>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <p class="{{ category }}">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+<form action="/edit-product/{{product[0]}}" method="post">
+    <input type="text" value="{{ product[1] }}" name = "name_product" placeholder="Masukan Nama Product" required>
+    <input type="text" value="{{ product[2] }}" name = "image_url" placeholder="Masukan URL image"required>
+    <input type="number" value="{{ product[3] }}" name = "price" placeholder="Masukan Harga Product"required>
+
+    <select name="category" id="" required>
+        <option value = "" > {{product[4]}} </option>
+        {% for category in category %}
+        <option value="{{ category[0]}}">{{ category[1]}}</option>
+        {% endfor %}
+    </select>
+    
+    <button type="submit"> Simpan data</button>
+</form>
+{% endblock %}

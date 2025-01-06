@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Tambah Produk{% endblock %}
+
+{% block content %}
+<h1 style="background-color: antiquewhite;">
+    Form Tambah Product
+</h1>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <p class="{{ category }}">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+    <form action="/add-product" method="post" style="display: flex; flex-direction: column; padding-inline: 200px; gap: 10px;">
+        <input type="text" name = "name_product" placeholder="Masukan Nama Product" required>
+        <input type="text" name = "image_url" placeholder="Masukan URL image"required>
+        <input type="number" name = "price" placeholder="Masukan Harga Product"required>
+        <select name="category" id="" >
+            <option value="">pilih category</option>
+            {% for category in category %}
+            <option value="{{ category[0]}}">{{ category[1]}}</option>
+            {% endfor %}
+        </select>
+        
+        <button type="submit" style="width: 100px; margin-right:0px; margin-left: auto;"> Simpan data</button>
+    </form>
+{% endblock %}

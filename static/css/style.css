@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,html {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Karla";
+}
+
+
+
+body {
+    background: gray;
+    position: relative;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+nav h1{
+    font-size:40px;
+    margin-left: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+    margin-right: 40px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+nav ul li a:hover{
+    color: white;
+}
+
+nav .menu_icon{
+    font-size: 24px;
+    display: none;
+}
+
+
+main {
+    position: absolute;
+    top:46px;
+}
+
+.Home {
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: 100vw; */
+}
+
+main div h2 {
+    font-size: 40px;
+    letter-spacing: 2   px;
+    margin-bottom: 20px;
+    font-family: 'oboto';
+}
+
+.Home div p {
+    font-family: 'oboto';
+    letter-spacing: 1.5px;
+    width: 800px;
+    height: auto ;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+span{
+    color: lightsalmon;
+    font-family: 'oboto';
+}
+
+.Home > div > img {
+    width: 300px;
+    height: 300px;
+}
+
+.img {
+    display: flex;
+
+}
+
+.service {
+    display: flex  ;
+    flex-direction: column;
+    padding-inline: 300px;
+    padding-top: 30px;
+    background-color: antiquewhite;
+    justify-content: center;
+}
+
+.service > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+td{
+    padding: 5px;
+}
+
+.produk_kami{
+    background-color: rgb(212, 200, 125);
+    height: 60vh; 
+    padding-inline: 300px;
+    justify-content:space-between;
+    padding-top: 50px;
+}
+
+.h2_paragraf_produk_kami{
+    margin-bottom: 10px;
+}
+
+.h2_paragraf_produk_kami h2{
+    font-size: 23px;
+    font-family: 'Karla';
+}
+
+.card_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_produk_kami{
+    width:15rem;
+    height: 24rem;;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.produk_kami .card_produk_kami img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+}
+
+.card_produk_kami h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    transition: inset .3s .3s ease-out;
+    font-weight: bold;
+}
+
+.produk_kami .card_produk_kami p{
+    position: absolute;
+    opacity: 0;
+    max-width: 75%;
+    transition: opacity .3s ease-out;
+}
+
+.produk_kami .card_produk_kami a{
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+}
+
+
+.produk_kami .card_produk_kami p {
+    inset: auto auto 80px 30px;
+}
+
+.produk_kami .card_produk_kami a {
+    inset: auto auto 40px 30px;
+    color: inherit;
+    text-decoration: none;
+}
+
+&:hover .produk_kami .card_produk_kami h2 {
+    inset: auto auto 300px 30px;
+    transition: inset .3s ease-out;
+
+}
+
+&:hover .produk_kami .card_produk_kami p {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+    margin-top: 30px;
+}
+
+&:hover .produk_kami .card_produk_kami a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
+
+&:hover .produk_kami .card_produk_kami img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
+}
+
+.footer{
+
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer h3{
+    font-size: 25px;
+}
+
+.footer div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer div a{
+    font-size: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer .copy_right{
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+
+
+@media(max-width: 1200px){
+
+    nav{
+        flex-wrap: wrap;
+    }
+    nav h1{
+        font-size: 27px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav .menu_icon{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 55px;
+    }
+
+    
+
+    nav ul.hidden{
+        display: none;
+    }
+
+    nav ul li a{
+        border-bottom: 1px solid;
+    }
+
+    nav ul li:last-child{
+        margin-bottom: 15px;
+    }
+
+    .Home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Home > div > img {
+        width: 150px;
+        height: 150px;
+    }
+
+    main div h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .Home div p {
+        width: auto;
+        margin-left:  30px;
+        margin-right: 30px;
+        font-size: 17px;
+        line-height: 25px;
+        text-align: justify;
+    }
+
+    .service{
+        display: flex;
+        flex-direction: column;
+        padding-inline: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: auto;
+    }
+
+    .produk_kami{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-inline: 20px;
+        padding-top: 50px ;
+        padding-bottom: 50px;
+    }
+
+    .h2_paragraf_produk_kami h2{
+        margin-left: -2px;
+    }
+
+    .card_container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produk_kami .card_produk_kami{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+} 
