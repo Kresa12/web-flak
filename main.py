@@ -27,6 +27,7 @@ def home():
     cur.execute(query)
     product = cur.fetchall()
     return render_template('index.html', product=product)
+    # return jsonify(product)
 
 @app.route('/homepage')
 def homepage():
@@ -39,6 +40,7 @@ def homepage():
     cur.execute(query)
     product = cur.fetchall()
     return render_template('home-page.html', product=product)
+    
 
 @app.route('/simpan-data', methods=['post'])
 def submit():
